@@ -9,15 +9,15 @@ namespace Mascari4615
 	[UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 	public class MTargetBool : CustomBool
 	{
-		[Header("_" + nameof(MTargetBool))]
-		[SerializeField] private MTarget _mTarget;
-		public MTarget MTarget => _mTarget;
+		[field: Header("_" + nameof(MTargetBool))]
+		[field: SerializeField] public MTarget MTarget { get; private set; }
 
 		protected override void Start()
 		{
 			OnValueChange();
 		}
 
+		// Should Called By MTarget Change Event
 		public void UpdateValue()
 		{
 			SetValue(MTarget.IsLocalPlayerTarget);
