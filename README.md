@@ -6,6 +6,11 @@
   -  U#을 사용하지만, Udon 같은 Event (C# 리플렉션/Unity 메시지 브로드캐스트) 기반으로 시스템 구현 
   -  Static 사용에 제한이 있기에, Util 기능을 모아둔 클래스를 직접 상속
 
+## Require
+
+- UdonSharpVideo : MUI/MFullScreen, VideoPlayerController 등
+- QvPen : CloverSketchbook, RusukBar 등
+
 ## 제발 내 코드에 훈수하세요
 
 - 자유롭게 수정/사용 가능합니다, 피드백 환영합니다 !
