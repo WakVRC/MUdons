@@ -39,7 +39,7 @@ namespace Mascari4615
 				return;
 
 			bool localPlayerIsInRoom = false;
-			for (int i = 0; i < TGameManager.PLAYER_COUNT; i++)
+			for (int i = 0; i < mTargets.Length; i++)
 			{
 				if (mTargets[i].IsLocalPlayerTarget && syncedBools[i].Value)
 				{
@@ -54,7 +54,7 @@ namespace Mascari4615
 				int targetPlayerID = voiceManager.PlayerApis[i].playerId;
 				bool targetPlayerIsInRoom = false;
 
-				for (int j = 0; j < TGameManager.PLAYER_COUNT; j++)
+				for (int j = 0; j < mTargets.Length; j++)
 				{
 					if (mTargets[j].CurTargetPlayerID == targetPlayerID && syncedBools[j].Value)
 					{
@@ -75,7 +75,7 @@ namespace Mascari4615
 				return;
 
 			int inPlayerCount = 0;
-			for (int i = 0; i < TGameManager.PLAYER_COUNT; i++)
+			for (int i = 0; i < mTargets.Length; i++)
 			{
 				if (syncedBools[i].Value)
 					inPlayerCount++;
@@ -104,7 +104,7 @@ namespace Mascari4615
 
 		private int GetLocalPlayerNum()
 		{
-			for (int i = 0; i < TGameManager.PLAYER_COUNT; i++)
+			for (int i = 0; i < mTargets.Length; i++)
 			{
 				if (mTargets[i].IsLocalPlayerTarget)
 					return i;
@@ -126,7 +126,7 @@ namespace Mascari4615
 
 		public void ResetSync()
 		{
-			for (int i = 0; i < TGameManager.PLAYER_COUNT; i++)
+			for (int i = 0; i < mTargets.Length; i++)
 				syncedBools[i].SetValue(false);
 
 			Unlock();
