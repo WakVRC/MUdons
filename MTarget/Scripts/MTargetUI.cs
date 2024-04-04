@@ -15,6 +15,7 @@ namespace Mascari4615
 		[SerializeField] private TextMeshProUGUI localPlayerUI;
 
 		[SerializeField] private Transform buttonsParent;
+		[SerializeField] private bool printPlayerID = true;
 
 		private MTarget mTarget;
 		private GameObject[] playerSelectButtons;
@@ -55,7 +56,12 @@ namespace Mascari4615
 				VRCPlayerApi targetPlayer = VRCPlayerApi.GetPlayerById(curTargetPlayerID);
 
 				if (targetPlayer != null)
-					s = $"{curTargetPlayerID} : {VRCPlayerApi.GetPlayerById(curTargetPlayerID).displayName}";
+				{
+					s = "";
+					if (printPlayerID)
+						s = $"{curTargetPlayerID} : ";
+					s += $"{VRCPlayerApi.GetPlayerById(curTargetPlayerID).displayName}";
+				}
 			}
 
 			targetPlayerUI.text = s;

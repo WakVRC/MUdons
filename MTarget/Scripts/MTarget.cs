@@ -1,4 +1,5 @@
-﻿using UdonSharp;
+﻿using TMPro;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 
@@ -48,6 +49,13 @@ namespace Mascari4615
 		{
 			SetOwner();
 			CurTargetPlayerID = id;
+			RequestSerialization();
+		}
+
+		public void SetLocalPlayer()
+		{
+			SetOwner();
+			CurTargetPlayerID = Networking.LocalPlayer.playerId;
 			RequestSerialization();
 		}
 

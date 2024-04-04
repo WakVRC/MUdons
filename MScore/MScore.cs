@@ -22,6 +22,7 @@ namespace Mascari4615
 		[SerializeField] private int defaultScore = 0;
 		[SerializeField] private bool printPlusOne;
 		[SerializeField] private bool useClamp;
+		[SerializeField] private bool useLoop;
 
 		[SerializeField] private bool useSync;
 		[SerializeField] private CustomBool isMaxScore;
@@ -59,7 +60,7 @@ namespace Mascari4615
 				_syncedScore = value;
 
 				if (useSync)
-					Score = _syncedScore;
+					SetScore(_syncedScore);
 			}
 		}
 		private int _score;
@@ -85,7 +86,7 @@ namespace Mascari4615
 			}
 			else
 			{
-				Score = defaultScore;
+				SetScore(defaultScore);
 			}
 
 			OnScoreChange();
@@ -95,16 +96,27 @@ namespace Mascari4615
 		#region Score
 		public void SetMinMaxScore(int min, int max)
 		{
+			MDebugLog($"{nameof(SetMinMaxScore)}");
 			minScore = min;
 			maxScore = max;
-			Score = Mathf.Clamp(Score, minScore, maxScore);
+			if (Score < minScore || Score > maxScore)
+				SetScore(Mathf.Clamp(Score, minScore, maxScore));
 		}
 
 		public void SetScore(int newScore)
 		{
+			MDebugLog($"{nameof(SetScore)}");
 			if (useClamp)
 			{
 				newScore = Mathf.Clamp(newScore, minScore, maxScore);
+			}
+			else if (useLoop)
+			{
+				if (newScore > maxScore)
+					newScore = newScore - maxScore - 1;
+
+				if (newScore < minScore)
+					newScore = maxScore + newScore;
 			}
 			else
 			{
@@ -130,10 +142,12 @@ namespace Mascari4615
 		public void SetScore0() => SetScore(0);
 		public void SetScore1() => SetScore(1);
 		public void SetScore2() => SetScore(2);
+		public void SetScore3() => SetScore(3);
+		public void SetScore4() => SetScore(4);
 
 		private void OnScoreChange()
 		{
-			MDebugLog(nameof(OnScoreChange));
+			// MDebugLog(nameof(OnScoreChange));
 
 			if (isMaxScore)
 				isMaxScore.SetValue(Score == maxScore);
