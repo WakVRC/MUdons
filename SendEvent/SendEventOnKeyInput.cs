@@ -17,10 +17,10 @@ namespace Mascari4615
 
 		private void Update()
 		{
-			if (Input.GetKeyDown(keyCode))
+			if (whenGetKeyDown && Input.GetKeyDown(keyCode))
 				SendEvents();
 
-			if (Input.GetKeyUp(keyCode))
+			if (whenGetKeyUp && Input.GetKeyUp(keyCode))
 				SendEvents();
 		}
 	}
