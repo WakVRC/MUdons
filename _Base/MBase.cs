@@ -22,6 +22,8 @@ namespace Mascari4615
 
 		protected const int NONE_INT = -1;
 		protected const string NONE_STRING = "SANS";
+		protected const string TRUE_STRING = "TRUE";
+		protected const string FALSE_STRING = "FALSE";
 
 		[Header("_" + nameof(MBase))]
 		[SerializeField] protected bool DEBUG;
@@ -252,43 +254,6 @@ namespace Mascari4615
 			}
 
 			return NONE_INT;
-		}
-		#endregion
-
-		#region Voice
-		protected const int VOICE_QUIET_GAIN = 5;
-		protected const int VOICE_QUIET_FAR = 10;
-
-		protected const int VOICE_DEFAULT_GAIN = 15;
-		protected const int VOICE_DEFAULT_FAR = 25;
-
-		protected const int VOICE_AMPLIFICATION_GAIN = 10;
-		protected const int VOICE_AMPLIFICATION_FAR = 300;
-
-		protected void SetVoice(VRCPlayerApi player, VoiceState voiceState)
-		{
-			// MDebugLog($"{nameof(SetVoice)} : {player.playerId}, {voiceState}");
-
-			player.SetVoiceDistanceNear(0);
-			switch (voiceState)
-			{
-				case VoiceState.Default:
-					player.SetVoiceDistanceFar(VOICE_DEFAULT_FAR);
-					player.SetVoiceGain(VOICE_DEFAULT_GAIN);
-					break;
-				case VoiceState.Quiet:
-					player.SetVoiceDistanceFar(VOICE_QUIET_FAR);
-					player.SetVoiceGain(VOICE_QUIET_GAIN);
-					break;
-				case VoiceState.Mute:
-					player.SetVoiceDistanceFar(0);
-					player.SetVoiceGain(0);
-					break;
-				case VoiceState.Amplification:
-					player.SetVoiceDistanceFar(VOICE_AMPLIFICATION_FAR);
-					player.SetVoiceGain(VOICE_AMPLIFICATION_GAIN);
-					break;
-			}
 		}
 		#endregion
 	}
