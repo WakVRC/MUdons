@@ -5,14 +5,6 @@ using VRC.SDKBase;
 
 namespace Mascari4615
 {
-	public enum VoiceState
-	{
-		Default,
-		Quiet,
-		Mute,
-		Amplification
-	}
-
 	public class MBase : UdonSharpBehaviour
 	{
 		protected const string DEBUG_PREFIX = "DEBUG";

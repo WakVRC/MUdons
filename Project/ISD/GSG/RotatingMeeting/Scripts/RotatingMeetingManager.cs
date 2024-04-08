@@ -344,7 +344,7 @@ namespace Mascari4615
 		public void SetVoiceAmplification()
 		{
 			voiceAmplification.SetPlayer(Networking.LocalPlayer.playerId);
-			voiceAmplification.SetState(true);
+			voiceAmplification.SetEnable(true);
 		}
 
 		private int voteTargetCupIndex = 0;
@@ -419,7 +419,7 @@ namespace Mascari4615
 		public void ResetUlt()
 		{
 			voiceAmplification.SetPlayer(NONE_INT);
-			voiceAmplification.SetState(false);
+			voiceAmplification.SetEnable(false);
 			IsStop.SetValue(false);
 			SendCustomNetworkEvent(NetworkEventTarget.All, nameof(CloseVote));
 		}

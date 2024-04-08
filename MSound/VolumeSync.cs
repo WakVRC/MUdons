@@ -13,7 +13,8 @@ namespace Mascari4615
 			if (syncedSlider == null)
 				return;
 
-			foreach (var audioSource in audioSources) audioSource.volume = syncedSlider.CurValue;
+			foreach (AudioSource audioSource in audioSources)
+				audioSource.volume = syncedSlider.CurValue;
 		}
 	}
 }

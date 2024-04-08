@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: MSFXManagerUI
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 770db3136600d2f47ac1733c96aedb43,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b08fe5c87e8f8f94685d40d7a044e53b,
     type: 2}
   udonAssembly: 
   assemblyError: 
