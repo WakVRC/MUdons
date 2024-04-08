@@ -165,7 +165,7 @@ namespace Mascari4615
 		protected bool IsLocalWakgood => Networking.LocalPlayer.displayName.Equals(WakgoodName);
 		protected VRCPlayerApi Wakgood => GetPlayerByName(WakgoodName);
 
-		// TODO : OLD
+		// TODO: 어칼님께서 업데이트 해주신 걸로 수정
 		protected readonly string[] waktaDisplayNameDic =
 		{
 			"VRwakgood",
@@ -201,7 +201,6 @@ namespace Mascari4615
 			"Hiki King",
 		};
 
-		// TODO : OLD
 		protected readonly string[] waktaNicknameDic =
 		{
 			"우왁굳",
