@@ -12,7 +12,9 @@ namespace Mascari4615
 		[field: SerializeField] public VoiceAreaTag Tag { get; private set; }
 		[SerializeField] private float updateTerm = .5f;
 
+		[SerializeField] private CustomBool localPlayerIn;
 		private bool isLocalPlayerIn;
+		[SerializeField] private CustomBool someoneIn;
 		private bool isSomeoneIn;
 
 		protected virtual void Start() => UpdateVoiceLoop();
@@ -27,24 +29,28 @@ namespace Mascari4615
 			if (NotOnline)
 				return;
 
-			if (voiceManager.PlayerApis == null ||
-				voiceManager.PlayerApis.Length != VRCPlayerApi.GetPlayerCount())
+			isLocalPlayerIn = false;
+			isSomeoneIn = false;
+
+			if (voiceManager.PlayerApis != null &&
+				voiceManager.PlayerApis.Length == VRCPlayerApi.GetPlayerCount())
 			{
-				isLocalPlayerIn = false;
-				isSomeoneIn = false;
-				return;
+				for (int i = 0; i < voiceManager.PlayerApis.Length; i++)
+				{
+					bool isIn = IsPlayerIn(voiceManager.PlayerApis[i]);
+
+					UpdatePlayerTag(voiceManager.PlayerApis[i], isIn);
+
+					isSomeoneIn = isSomeoneIn || isIn;
+					if (voiceManager.PlayerApis[i].isLocal)
+						isLocalPlayerIn = isIn;
+				}
 			}
-
-			for (int i = 0; i < voiceManager.PlayerApis.Length; i++)
-			{
-				bool isIn = IsPlayerIn(voiceManager.PlayerApis[i]);
-
-				UpdatePlayerTag(voiceManager.PlayerApis[i], isIn);
-
-				isSomeoneIn = isSomeoneIn || isIn;
-				if (voiceManager.PlayerApis[i].isLocal)
-					isLocalPlayerIn = isIn;
-			}
+			
+			if (localPlayerIn)
+				localPlayerIn.SetValue(isLocalPlayerIn);
+			if (someoneIn)
+				someoneIn.SetValue(isSomeoneIn);
 		}
 
 		public virtual bool IsPlayerIn(VRCPlayerApi player) { return true; }

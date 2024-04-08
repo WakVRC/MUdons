@@ -11,9 +11,6 @@ namespace Mascari4615
 		private Bounds[] boundsArray;
 		[SerializeField] private BoxCollider[] areaColliders;
 
-		[SerializeField] private CustomBool someoneIn;
-		[SerializeField] private CustomBool localPlayerIn;
-
 		protected override void Start()
 		{
 			boundsArray = new Bounds[areaColliders.Length];
