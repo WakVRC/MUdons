@@ -74,5 +74,8 @@ crashlytics-build.properties
 /MSound/SFX/
 /MSound/SFX.meta
 
-/Clwak/Sprite/
-/Clwak/Sprite.meta
+/Project/RusukBar/Clwak/Sprite/
+/Project/RusukBar/Clwak/Sprite/.meta
+
+/UdonShrine/
+/UdonShrine.meta
