@@ -79,7 +79,7 @@ namespace Mascari4615
 				return false;
 
 			s = s.TrimEnd('\n', ' ', (char)8203);
-			if (s.Length == '0')
+			if (s.Length == 0)
 				return false;
 
 			foreach (var c in s)
