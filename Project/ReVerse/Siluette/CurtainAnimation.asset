@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: CurtainAnimation
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 08c9c4136b71ef847be45a24f4c858e4,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 093a1cb04a5d0054b8b4340d9575b196,
     type: 2}
   udonAssembly: 
   assemblyError: 

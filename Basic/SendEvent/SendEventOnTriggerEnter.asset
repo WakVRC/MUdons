@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SendEventOnTriggerEnter
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 1b4e97371b0c29e47885bf42cbd84d09,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 392e3eb66768f254999763a61aebb80e,
     type: 2}
   udonAssembly: 
   assemblyError: 

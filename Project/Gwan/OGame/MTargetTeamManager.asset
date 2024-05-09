@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: MTargetTeamManager
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: ca0d9e7fda843ef49997d97c004dc71b,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 319e70f7dc9a11f40943e1beaa635a50,
     type: 2}
   udonAssembly: 
   assemblyError: 

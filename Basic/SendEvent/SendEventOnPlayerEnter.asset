@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SendEventOnPlayerEnter
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 73fd84eba0985e84e8919ade7bf382bc,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 4bf4bf329f09b5b48a2bb603241bb62d,
     type: 2}
   udonAssembly: 
   assemblyError: 

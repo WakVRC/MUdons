@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: VoiceUpdater_Tag
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 127d5505ae73bc243b78b930a715ad37,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 12ed085bad7e5314490657317844bdec,
     type: 2}
   udonAssembly: 
   assemblyError: 

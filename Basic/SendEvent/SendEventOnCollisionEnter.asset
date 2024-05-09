@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SendEventOnCollisionEnter
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 3cb3a122c3a3b4545a3f5eab3e797a6f,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 34591964ef636af40850fd21c466603d,
     type: 2}
   udonAssembly: 
   assemblyError: 

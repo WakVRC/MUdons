@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: GoBoardManager
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: d3d2ab43f34a77146a4bca8bc8e283ea,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: bf6d6fea9fc28654683d7a5be5d38428,
     type: 2}
   udonAssembly: 
   assemblyError: 

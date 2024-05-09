@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: VoiceAmplification_Area
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: cab4c77f92f838a49a663123e8e7d077,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 6310934493348254da189209d634e3ed,
     type: 2}
   udonAssembly: 
   assemblyError: 

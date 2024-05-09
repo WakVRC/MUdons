@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: VoiceRoom
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: e3ab5d31bb879004092e20e8b0120051,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: e2248a705facacb41be7c51c4bab1dee,
     type: 2}
   udonAssembly: 
   assemblyError: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SendEventOnPickup
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: d120356d74cffeb4fade4b5cd50cd4ee,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: c513deb73ea3d3b4f8f682173fef4eef,
     type: 2}
   udonAssembly: 
   assemblyError: 
