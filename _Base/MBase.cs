@@ -75,11 +75,11 @@ namespace Mascari4615
 
 		protected bool IsDigit(string s)
 		{
-			if (s.Length <= 0)
+			if (string.IsNullOrEmpty(s))
 				return false;
 
 			s = s.TrimEnd('\n', ' ', (char)8203);
-			if (s.Length == 0)
+			if (string.IsNullOrEmpty(s))
 				return false;
 
 			foreach (var c in s)
