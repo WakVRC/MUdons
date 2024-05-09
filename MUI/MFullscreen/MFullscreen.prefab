@@ -611,14 +611,14 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 2854498385768017349}
-  debug: 0
+  DEBUG: 0
   internalAvProRenderer: {fileID: 0}
   videoPlayer: {fileID: 0}
   targetImages:
   - {fileID: 2854498384585053555}
   videoScreenHandler: {fileID: 0}
   customBool: {fileID: 0}
-  hideVideoWhenIsNotPlaying: 0
+  hideVideoWhenIsNotPlaying: 1
 --- !u!225 &5412230499378757778
 CanvasGroup:
   m_ObjectHideFlags: 0

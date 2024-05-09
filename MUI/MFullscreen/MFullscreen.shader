@@ -100,7 +100,8 @@ Shader "UI/MFullscreen"
             fixed4 frag(v2f IN) : SV_Target
             {
                 half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
-                color.rgb = pow(color.rgb,2.2);
+                // color.rgb = pow(color.rgb, 2.2);
+                color.rgb = pow(color.rgb, 1);
 
                 #ifdef UNITY_UI_CLIP_RECT
                 color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
